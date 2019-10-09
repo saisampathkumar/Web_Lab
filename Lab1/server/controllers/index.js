@@ -5,16 +5,15 @@ module.exports = function (app, db) {
     let course_details = db.model('course_details');
 
     //api to search student details
-    app.get('/student/search',(req,res)=>{
-        let search_text = req.query.searchtext;
-        let search_by = req.query.searchby;
+    app.get('/course/search',(req,res)=>{
+        let search_by = 'Lee';
         let query = {};
-        query[search_by] = { $regex: search_text, $options: 'i' };
-        student_details.find(query).exec((err, students) => {
+        query[search_by] = { $regex: 'Lee', $options: 'i' };
+        course_details.find(query).exec((err, course) => {
             if (!err) {
                 res.send({
                     result: "Success",
-                    data: students
+                    data: course
                 });
             } else {
                 res.status(400).send({
@@ -36,6 +35,31 @@ module.exports = function (app, db) {
             updated_on:new Date()
         });
         stud_details.save((err, student) => {
+            if (!err) {
+                res.send({
+                    result: "Success",
+                    message: "Details saved successfully"
+                });
+            } else {
+                res.status(400).send({
+                    result: "Failure",
+                    message: "Error in creating student",
+                    error: err.message
+                });
+            }
+        })
+    });
+
+    app.post('/courseDetails/save',(req,res) => {
+        console.log('hello');
+        let course = req.body;
+        let cou_details = new course_details({
+            courseName: course.courseName ,
+            professorName: course.professorName,
+            credits: course.credits,
+            courseId:course.courseId
+        });
+        cou_details.save((err, course) => {
             if (!err) {
                 res.send({
                     result: "Success",
