@@ -9,9 +9,9 @@ const db = require('mongoose'),
     db_string = 'mongodb://'+config.db_user+':'+config.db_pswd+'@ds331558.mlab.com:31558/web_lab1';
 
 //initializing schema
-require('./models/student_details')
-require('./models/profile_details')
-require('./models/course_details')
+require('./models/student_details');
+require('./models/profile_details');
+require('./models/course_details');
 
 //connection for DB
 var db_promise = db.connect(db_string,{ useNewUrlParser: true });

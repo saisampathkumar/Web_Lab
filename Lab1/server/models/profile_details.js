@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-//schema for student form details
+//schema for profile form details
 const profile_details = new Schema({
     userId: String,
     name: String,
@@ -12,7 +12,9 @@ const profile_details = new Schema({
     address: String,
     dob: String,
     image: String,
+    yearJoined: String,
     department: String,
+    major: String,
     created_on:Date,
     updated_on:Date
 });

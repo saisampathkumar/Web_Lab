@@ -11,27 +11,27 @@ import { FriendsComponent } from './friends/friends.component';
 import { CoursesComponent } from './courses/courses.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { CourseEditComponent } from './course-edit/course-edit.component';
+import { CalenderComponent } from './calender/calender.component';
 
 
 const routes: Routes = [
   { path: 'SignUp', component: SignupComponent},
   { path: 'SignIn', component: SignInComponent},
-  { path: 'Courses', component: CoursesComponent},
+  { path: 'Home', component: CoursesComponent},
   { path: 'Friends', component: FriendsComponent},
   { path: 'DiscoverBooks', component: DiscoverBooksComponent},
   { path: 'VideoLessons', component: VideoLessonsComponent},
   { path: 'Announcements', component: AnnouncementsComponent},
-  { path: 'Home', component: ProfileComponent},
   { path: 'OnlineCourses', component: OnlineCoursesComponent},
-  { path: 'Profile', component: ProfileComponent},
+  { path: 'Profile', component:ProfileComponent},
   { path: 'editProfile', component:EditProfileComponent},
-  { path: 'edit_course', component: CourseEditComponent}
+  { path: 'edit_course', component: CourseEditComponent},
+  { path: 'calender', component: CalenderComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SignInComponent, SignupComponent, OnlineCoursesComponent, ProfileComponent, VideoLessonsComponent,
-   FriendsComponent, DiscoverBooksComponent, CoursesComponent, AnnouncementsComponent, EditProfileComponent, CourseEditComponent]
+export const routingComponents = [SignInComponent, SignupComponent, OnlineCoursesComponent, ProfileComponent,VideoLessonsComponent, FriendsComponent, DiscoverBooksComponent,CoursesComponent, AnnouncementsComponent,EditProfileComponent, CourseEditComponent, CalenderComponent,]
