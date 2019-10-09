@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'OnlineCourses', component: OnlineCoursesComponent},
   { path: 'Profile', component:ProfileComponent},
   { path: 'editProfile', component:EditProfileComponent},
-  { path: 'editCourse', component: CourseEditComponent}
+  { path: 'edit_course', component: CourseEditComponent}
 ];
 
 @NgModule({
