@@ -1,0 +1,48 @@
+<app-home></app-home>
+<div class="card" >
+    <br>
+  <form (ngSubmit)="onRegister()">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Course Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input [(ngModel)]="courseName" name="name" id="name" placeholder="Please Enter Your Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Professor Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input  [(ngModel)]="professorName"name="pname" id="pname" placeholder="Please Enter Your Professor Name">
+                            </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Credits:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input  [(ngModel)]="credits" name="credits" id="credits" placeholder="Please Enter the Number of Credits">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>CourseId:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input  [(ngModel)]="courseId" name="courseId" id="courseId" placeholder="Please Enter Your CourseId">
+                            </div>
+                        </div>
+
+                  </div>
+                </div>
+              <button style="height: 100%; " routerLink="/edit_course">Save</button>
+            </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

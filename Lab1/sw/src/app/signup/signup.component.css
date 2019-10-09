@@ -1,0 +1,107 @@
+body
+ {
+	margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #1c8adb;
+  background-position: center;
+	background-size: cover;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  }
+.sign-up-page
+  {
+  border: 3px solid darkblue;
+  width: 500px;
+  box-shadow: 0 0 2.5px 5px rgba(0,0,0,0.3);
+  background: #fff;
+  padding: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  text-align: center;
+  }
+.sign-up-page
+  {
+  color: #1c8adb;
+  margin-bottom: 40px;
+  }
+
+.input-box
+   {
+    border-radius: 20px;
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+   }
+.input-box:hover{
+    border: 4px solid #555;   
+   }
+.input-box:focus{
+    border-right: 8px solid #555;
+   }
+input:focus {
+    border-left: 8px solid #555;
+  }
+button
+   {
+   	color: #fff;
+   	width: 50%;
+   	padding: 13px;
+   	border-radius: 20px;
+   	font-size: 15px;
+   	margin: 10px 0;
+   	border: none;
+   	cursor: pointer;
+   }
+.signup-btn
+   {
+    background-color: #1c8adb;
+   }
+.signup-btn:hover
+  {
+  border: 3px solid #555;
+  padding: 10px;
+  transition: 0.4s;
+  letter-spacing:  1px;
+  }
+.facebook-btn
+   {
+   	background-color: #21afde;
+   }
+.facebook-btn:hover
+  {    
+  border: 3px solid rgb(0, 1, 73);
+  padding: 10px;
+  transition: 0.4s;
+  letter-spacing:  1px;
+  }
+a
+ {
+ 	text-decoration: none;
+ }
+hr
+  {
+  margin-top: 20px;
+  width: 80%;
+  }
+.or
+  {
+ 	background: #fff;
+ 	width: 30px;
+ 	margin: -19px auto 10px;
+  }
+.signin-logo-img
+  {
+ 	width: 70px;
+  }
+.umkc-img{
+  height: 135%;
+  width: 750px;
+  position: absolute;
+}
