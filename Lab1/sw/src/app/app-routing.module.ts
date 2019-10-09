@@ -20,9 +20,10 @@ const routes: Routes = [
   { path: 'Friends', component: FriendsComponent},
   { path: 'DiscoverBooks', component: DiscoverBooksComponent},
   { path: 'VideoLessons', component: VideoLessonsComponent},
-  { path: 'Announcements', component: AnnouncementsComponent},{ path: 'Home', component: ProfileComponent},
+  { path: 'Announcements', component: AnnouncementsComponent},
+  { path: 'Home', component: ProfileComponent},
   { path: 'OnlineCourses', component: OnlineCoursesComponent},
-  { path: 'Profile', component:ProfileComponent},
+  { path: 'Profile', component: ProfileComponent},
   { path: 'editProfile', component:EditProfileComponent},
   { path: 'edit_course', component: CourseEditComponent}
 ];
@@ -32,4 +33,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SignInComponent, SignupComponent, OnlineCoursesComponent, ProfileComponent,VideoLessonsComponent, FriendsComponent, DiscoverBooksComponent,CoursesComponent, AnnouncementsComponent,EditProfileComponent, CourseEditComponent]
+export const routingComponents = [SignInComponent, SignupComponent, OnlineCoursesComponent, ProfileComponent, VideoLessonsComponent,
+   FriendsComponent, DiscoverBooksComponent, CoursesComponent, AnnouncementsComponent, EditProfileComponent, CourseEditComponent]
