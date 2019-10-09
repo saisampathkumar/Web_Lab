@@ -1,0 +1,20 @@
+<body>
+	<div class="sign-up-page"> 
+        <img class="signin-logo-img" src="https://signup.com/mobileweb/2.0/images/build/mobile-organizers.png" alt="Sign Up">
+		<h1> SIGN UP NOW</h1>
+		<form (ngSubmit)="onRegister()">
+            <input [(ngModel)]="firstName" name="firstName" class="input-box" placeholder="First Name">
+            <input [(ngModel)]="lastName" name="lastName" class="input-box" placeholder="Last Name">
+			<input [(ngModel)]="email" name="email" type="Email" class="input-box" placeholder="Your Email">
+            <input [(ngModel)]="Password" name="Password" type="Password" class="input-box" placeholder="Your Password">	
+			<input [(ngModel)]="Password1" name="Password1" type="Password" class="input-box" placeholder="Re-enter Password">
+            <p><span><input type="checkbox"></span> I agree to the terms and conditions </p>
+			<button type="submit" class="signup-btn"> Sign Up </button>
+			<hr>
+			<p class="or">OR</p>
+			<button type="button" class="facebook-btn"> Sign up with Facebook </button>
+			<p> Do you have an account? <a routerLink ="/SignIn"> Sign in</a></p> 
+		</form>
+	</div>
+
+</body>
