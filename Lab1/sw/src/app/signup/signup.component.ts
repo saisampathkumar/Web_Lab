@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,6 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  router : Router;
   public firstName : string;
   public lastName : string;
   public Password : string;
@@ -18,7 +20,7 @@ export class SignupComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   onRegister(){
-    this.url = "http://127.0.0.1:3000/signup"
+    this.url = "http://127.0.0.1:3000/signup/register"
     this.http.post(this.url,{
       name: this.firstName +" "+ this.lastName ,
       email: this.email,
@@ -28,11 +30,12 @@ export class SignupComponent implements OnInit {
       (res:any)=>{
         this.message = res.message;
         alert(this.message);
+        this.router.navigate(['/Home']);
         console.log(this.message);
       }
     )
   }
-  ngOnInit() {
+  ngOnInit(){
   }
 
 }

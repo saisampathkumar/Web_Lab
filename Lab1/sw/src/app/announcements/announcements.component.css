@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+a:hover{
+    text-emphasis: none;
+    text-decoration: none;
+}

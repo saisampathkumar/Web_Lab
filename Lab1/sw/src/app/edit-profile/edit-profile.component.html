@@ -1,12 +1,12 @@
 <app-home></app-home>
 <div class="card" >
     <br>
-        <div class="row" style="margin-left: 40px">
+        <form (ngSubmit)="onProfile()" class="row" style="margin-left: 40px">
             <div class="col-sm-4 text-center">
                 <div class="card">
                     <div class="card-body">
                       <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-1/p240x240/29063485_1659424430807667_4337560930995883609_n.jpg?_nc_cat=105&_nc_oc=AQlazz4tbl4rS5O5Mc-tdKPzzWz5j8pINw6XjzN3sL8kply2Rg2H5k3MMLd0bZJXbLpnFX6FpdA_DLzfmN_dd1zo&_nc_ht=scontent.fmkc1-1.fna&oh=fb52eaac1cef2ae4faf99eff8660a1c2&oe=5E2D9010" alt="">
-                      <input type="type" name="image" id="image" placeholder="Please enter your Image Link">
+                      <input [(ngModel)]="image" type="type" name="image" id="image" placeholder="Please enter your Image Link">
                     </div>
                 </div>
             </div>
@@ -14,10 +14,10 @@
                 <div class="card">
                     <div class="profile-head emp-profile">
                         <h5>
-                        <input placeholder="Enter Used Id">
+                        <input [(ngModel)]="userId" type="text" name="userId" id="userId" placeholder="Enter Used Id">
                         </h5>
                         <h6>
-                        <input placeholder="Enter Department">
+                        <input [(ngModel)]="department" type="text" name="department" id="department" placeholder="Enter Department">
                         </h6>     
                         <hr> 
                     <div class="card-body">
@@ -26,7 +26,7 @@
                                 <label>Name:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Name">
+                                <input [(ngModel)]="name" type="text" name="name" id="name" placeholder="Please Enter Your Name">
                             </div>                                
                         </div>
                         <div class="row">
@@ -34,7 +34,7 @@
                                 <label>Email ID:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your email">
+                                <input [(ngModel)]="text" type="email" name="email" id="email" placeholder="Please Enter Your email">
                             </div>                                
                             </div>
                         <div class="row">
@@ -42,7 +42,7 @@
                                 <label>Address:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" name="name" id="name" placeholder="Please Enter Your Address">
+                                <input [(ngModel)]="address" type="Address" name="address" id="address" placeholder="Please Enter Your Address">
                             </div>                                
                         </div>
                         <div class="row">
@@ -50,7 +50,7 @@
                                 <label>Contact:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="tel" name="name" id="name" placeholder="Please Enter Your Contact">
+                                <input [(ngModel)]="contact" type="tel" name="contact" id="contact" placeholder="Please Enter Your Contact">
                             </div>                                
                         </div>
                         <div class="row">
@@ -58,7 +58,7 @@
                                 <label>Age:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Age">
+                                <input [(ngModel)]="age" type="number" name="age" id="age" placeholder="Please Enter Your Age">
                             </div>                                
                         </div>
                         <div class="row">
@@ -66,7 +66,7 @@
                                 <label>Date Of Birth:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="date" name="name" id="name" placeholder="Please Enter Your Date Of birth">
+                                <input [(ngModel)]="dob" type="date" name="dob" id="dob" placeholder="Please Enter Your Date Of birth">
                             </div>                                
                         </div>
                         <div class="row">
@@ -74,7 +74,7 @@
                                 <label>University:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your University Name">
+                                <input [(ngModel)]="university" type="text" name="university" id="university" placeholder="Please Enter Your University Name">
                             </div>                                
                         </div>
                         <div class="row">
@@ -82,7 +82,7 @@
                                 <label>Major:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Major">
+                                <input [(ngModel)]="major" type="text" name="major" id="major" placeholder="Please Enter Your Major">
                             </div>                                
                         </div> 
                         <div class="row">
@@ -90,15 +90,15 @@
                                 <label>Year Joined:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Year Joined">
+                                <input [(ngModel)]="yearJoined" type="year" name="yearJoined" id="yearJoined" placeholder="Please Enter Year Joined">
                             </div>                                
                         </div>                                                      
                     </div>
                   </div>
                 </div>
             </div>
-            <button style="height: 100%;" routerLink="/Profile">Save</button>
-        </div>
+            <button type="submit" style="height: 100%;" routerLink="e">Save</button>
+        </form>
     <br>
 </div>
 <app-footer></app-footer>
