@@ -19,12 +19,8 @@ export class SignupComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   onRegister(){
-
-    // let EMAIL_REGEXP = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
-
-
     if(this.Password == this.Password1){
-    if(!this.lastName == null && !this.firstName == null && !this.Password == null && !this.Password1==null && !this.email==null)
+    if(this.lastName != null && this.firstName != null && this.Password != null && this.Password1!=null && this.email!=null)
     {
     this.url = "http://127.0.0.1:3000/signup/register"
     this.http.post(this.url,{
@@ -42,7 +38,7 @@ export class SignupComponent implements OnInit {
     )
     }
     else{
-      alert("Please fill the form");
+      alert("Please fill the form correctly");
     }
   }
   else{
