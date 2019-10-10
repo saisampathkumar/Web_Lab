@@ -10,6 +10,6 @@ export class AppComponent implements OnInit {
   title = 'Student World';
   constructor(private router: Router) { }
   ngOnInit(){
-    this.router.navigate(['/SignUp']);
+    this.router.navigate(['/Home']);
   }
 }
