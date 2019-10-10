@@ -23,6 +23,23 @@ module.exports = function (app, db) {
             }
         });
     });
+
+    app.get('/friends/search',(req,res)=>{
+        profile_details.find().exec((err, profile) => {
+            if (!err) {
+                res.send({
+                    result: "Success",
+                    data: profile
+                });
+            } else {
+                res.status(400).send({
+                    result: "Failure",
+                    message: "Error in fetching Profile list",
+                    error: err.message
+                });
+            }
+        });
+    });
     //api to search student details
     app.get('/student/search',(req,res)=>{
         let search_text = req.query.searchtext;
