@@ -71,6 +71,30 @@ module.exports = function (app, db) {
         })
     });
 
+    app.post('/courseDetails/save',(req,res) => {
+        let course = req.body;
+        let co_details = new course_details({
+            courseName:course.courseName,
+            professorName:course.professorName,
+            credits:course.credits,
+            description:course.description
+        });
+        co_details.save((err, course) => {
+            if (!err) {
+                res.send({
+                    result: "Success",
+                    message: "Details saved successfully"
+                });
+            } else {
+                res.status(400).send({
+                    result: "Failure",
+                    message: "Error in creating Course Details",
+                    error: err.message
+                });
+            }
+        })
+    });
+
     app.post('/profile/Fillup',(req,res) => {
         let profile = req.body;
         let prof_details = new profile_details({

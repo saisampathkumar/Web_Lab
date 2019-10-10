@@ -1,93 +1,48 @@
 <app-home></app-home>
 <div class="card" >
     <br>
+  <form (ngSubmit)="onRegister()">
             <div class="col-sm-6">
                 <div class="card">
-                    <div class="profile-head emp-profile">
-                        <h5>
-                        <input placeholder="Enter Used Id">
-                        </h5>
-                        <h6>
-                        <input placeholder="Enter Department">
-                        </h6>     
-                        <hr> 
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Name:</label>
+                                <label>Course Name:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Name">
-                            </div>                                
+                                <input [(ngModel)]="courseName" name="name" id="name" placeholder="Please Enter Your Name">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Email ID:</label>
+                                <label>Professor Name:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your email">
-                            </div>                                
+                                <input  [(ngModel)]="professorName"name="pname" id="pname" placeholder="Please Enter Your Professor Name">
+                            </div>
                             </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Address:</label>
+                                <label>Credits:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" name="name" id="name" placeholder="Please Enter Your Address">
-                            </div>                                
+                                <input  [(ngModel)]="credits" name="credits" id="credits" placeholder="Please Enter the Number of Credits">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Contact:</label>
+                                <label>Description:</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="tel" name="name" id="name" placeholder="Please Enter Your Contact">
-                            </div>                                
+                                <input  [(ngModel)]="description" name="description" id="description" placeholder="Please Enter Course Description">
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Age:</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Age">
-                            </div>                                
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Date Of Birth:</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="date" name="name" id="name" placeholder="Please Enter Your Date Of birth">
-                            </div>                                
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>University:</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your University Name">
-                            </div>                                
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Major:</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Your Major">
-                            </div>                                
-                        </div> 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Year Joined:</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Please Enter Year Joined">
-                            </div>                                
-                        </div>                                                      
-                    </div>
+
                   </div>
                 </div>
+              <button style="height: 100%; " routerLink="/edit_course">Save</button>
             </div>
-            <button style="height: 100%;" routerLink="/Profile">Save</button>
+  </form>
+</div>
 
 <app-footer></app-footer>
