@@ -13,7 +13,7 @@ export class CoursesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.url = "http://127.0.0.1:3000/course/search"
+    this.url = 'http://127.0.0.1:3000/course/search'
     this.http.get(this.url).subscribe((res:any)=>{
       this.result = res.data;
       console.log(this.result);

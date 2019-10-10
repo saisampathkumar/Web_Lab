@@ -12,7 +12,7 @@ export class CourseEditComponent implements OnInit {
   public courseName: string;
   public professorName: string;
   public credits: string;
-  public courseId: string;
+  public description: string;
   public url: string
   message: Observable<any>
   constructor(private http: HttpClient) { }
@@ -24,7 +24,7 @@ export class CourseEditComponent implements OnInit {
       courseName: this.courseName ,
       professorName: this.professorName,
       credits: this.credits,
-      courseId: this.courseId,
+      description: this.description,
     })
       .subscribe(
         (res: any) => {
