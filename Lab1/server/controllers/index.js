@@ -24,13 +24,15 @@ module.exports = function (app, db) {
         });
     });
     //api to search student details
-    app.get('/student/search',(req,res)=>{
+    app.get('/signin',(req,res)=>{
         let search_text = req.query.searchtext;
-        let search_by = req.query.searchby;
+        let search_by = 'name';
         let query = {};
-        query[search_by] = { $regex: search_text, $options: 'i' };
+        console.log(search_text);
+        query[search_by] = { $regex:search_text, $options: 'i' };
         student_details.find(query).exec((err, students) => {
             if (!err) {
+                console.log(students);
                 res.send({
                     result: "Success",
                     data: students
