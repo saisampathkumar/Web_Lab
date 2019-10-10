@@ -1,14 +1,28 @@
 body
  {
-	margin: 0;
+  margin: 0;
   padding: 0;
+  height: 630px;
   font-family: sans-serif;
   background-color: #1c8adb;
   background-position: center;
 	background-size: cover;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  }
+ }
+
+ header
+{
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 700px;
+    height: 630px;
+    text-align: center;
+    font-style: italic;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+}
 .sign-up-page
   {
   border: 3px solid darkblue;

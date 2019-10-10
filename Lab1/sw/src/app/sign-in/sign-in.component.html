@@ -1,11 +1,16 @@
 <body>
+	<header>
+			<br><br><br><br><br>
+		Welcome to Student World
+	</header>
 	<div class="sign-up-page"> 
 		<img class="signin-logo-img" src="https://signup.com/mobileweb/2.0/images/build/mobile-organizers.png" alt="Sign Up">
 		<h1> SIGN IN</h1>
-		<form>
-			<input type="Email" class="input-box" placeholder="Your Email">
-            <input type="Password" class="input-box" placeholder="Your Password">	
-			<button routerLink="/Courses" type="button" class="signup-btn"> Sign In </button>
+		<form name="sign" (ngSubmit)="onSignIn()">
+			<input [(ngModel)]="name" name="name" type="text" class="input-box" placeholder="UserName">
+			<!-- <p>{{name}}</p> -->
+            <input [(ngModel)]="password" name="Password" type="Password" class="input-box" placeholder="Your Password">	
+			<button type="submit" class="signup-btn"> Sign In </button>
 			<hr>
 			<p class="or">OR</p>
 			<button type="button" class="facebook-btn"> Login with Facebook </button>
