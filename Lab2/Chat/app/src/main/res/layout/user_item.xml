@@ -15,7 +15,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/profile_image"
-                android:src="@mipmap/_thumbnail"
+                android:src="@mipmap/profile_512"
                 android:contentDescription="@string/todo" />
 
             <TextView

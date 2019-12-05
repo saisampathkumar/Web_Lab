@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MessageActivity"
     android:orientation="vertical"
-    >
+    android:background="#e6e6e6">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/bar_layout"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:id="@+id/Toolbar"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:background="@color/colorPrimaryDark">
@@ -23,8 +24,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/profile_image"
-            android:src="@mipmap/_thumbnail"
-            android:contentDescription="@string/todo" />
+            android:src="@mipmap/profile_512"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/todo"
+            android:layout_marginStart="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +40,53 @@
             android:layout_toRightOf="@+id/profile_image"
             android:layout_toEndOf="@id/profile_image"
             android:layout_marginStart="10dp" />
+
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle_view"
+            android:layout_above="@+id/bottom">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:id="@+id/bottom"
+            android:padding="15dp">
 
 
+
+            <EditText
+                android:id="@+id/text_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/btn_send"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@android:color/transparent"
+                android:hint="@string/type_a_message"
+                android:importantForAutofill="no"
+                android:inputType="textLongMessage"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/btn_send"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/todo"
+                android:src="@mipmap/_thumbnail2" />
+        </RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

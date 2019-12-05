@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/profile_image"
+            android:src="@mipmap/profile_512"
+            android:layout_alignParentRight="true"
+            android:baselineAlignBottom="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/todo"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:background="@drawable/background_right"
+            android:text="Hello"
+            android:layout_marginLeft="5dp"
+            android:padding="8dp"
+            android:textSize="18sp"
+
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/profile_image"
+            android:layout_toStartOf="@id/profile_image"
+            android:layout_marginStart="10dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
